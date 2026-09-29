@@ -1,8 +1,9 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# ─── Monorepo root: Project-Websites-Google-Antigravity ─────────────────────
+# This .gitignore covers ALL projects in every sub-folder.
 
 # dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -11,38 +12,40 @@
 !.yarn/versions
 
 # testing
-/coverage
+coverage/
 
-# next.js
-/.next/
+# Next.js build output
+.next/
 /out/
-
-# production
-/build
+/build/
 
 # misc
 .DS_Store
 *.pem
 
-# debug
+# debug logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# env files — NEVER commit secrets
+.env
+.env.*
+!.env.example
 
 # vercel
 .vercel
 
-# typescript
+# typescript build info
 *.tsbuildinfo
 next-env.d.ts
 
-# sqlite (dev leftover)
-prisma/dev.db
-prisma/*.db
+# sqlite / prisma dev databases
+*.db
+*.db-journal
+*.db-shm
+*.db-wal
 
 # diagnostic/temp scripts
 test-pg.js
