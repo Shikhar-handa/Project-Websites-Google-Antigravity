@@ -1,0 +1,13 @@
+# Monorepo root netlify.toml
+# Tells Netlify that the CraveBite sub-project is the build target.
+
+[build]
+  base    = "CraveBite"
+  command = "npm run build"
+  publish = "CraveBite/.next"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
