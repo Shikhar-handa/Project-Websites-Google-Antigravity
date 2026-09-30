@@ -50,3 +50,6 @@ next-env.d.ts
 # diagnostic/temp scripts
 test-pg.js
 verify-db.mjs
+
+# Local Netlify folder
+.netlify
